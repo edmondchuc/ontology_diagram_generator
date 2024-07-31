@@ -62,11 +62,14 @@ from ontogram import Ontogram
 # Second parameter tells Ontogram what RDF format the OWL ontology is in.
 ontogram = Ontogram('ontology.ttl', format='turtle')
 
-# Generate a PNG diagram from the OWl ontology and write to disk as 'ontology.ttl.txt'.
+# Generate a Plantuml text file from the OWl ontology. Will be written to disk as 'ontology.ttl.txt'.
+ontogram.plantuml_file('ontology.ttl')
+
+# Generate a PNG diagram from the Plantuml file. Will be written to disk as 'ontology.ttl.txt.png'.
 ontogram.png_file('ontology.ttl.txt')
 
 # Same as above, but as an SVG diagram. 
-ontogram.svg_file('ontology.ttl.svg')
+ontogram.svg_file('ontology.ttl.txt')
 ```
 
 See the [examples](examples) directory for example outputs.
